@@ -1,0 +1,9 @@
+name: Jessica James Consulting
+markdown: redcarpet
+highlighter: pygments # or rouge or null
+description: Jessica James Consulting
+baseurl: ''
+url: 'http://localhost:9999'
+
+source: ../src
+destination: ../build
