@@ -9,11 +9,9 @@ var runSequence = require('run-sequence');
 gulp.task('build', function(callback) {
   runSequence(
   'delete',
-  'iconify',
   'jekyll',
   'sass',
   'scripts',
   'images',
-  'copy:swf',
   callback);
 });

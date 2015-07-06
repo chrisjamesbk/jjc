@@ -75,14 +75,6 @@ module.exports = {
     src: production
   },
 
-  iconify: {
-    src: srcAssets + '/icons/*.svg',
-    scssOutput: srcAssets + '/scss/iconify',
-    // we don't need fallback icons, stashing them here
-    pngOutput: srcAssets + '/scss/iconify/png',
-    cssOutput: srcAssets + '/scss/iconify/css'
-  },
-
   images: {
     src:  srcAssets + '/images/**/*',
     dest: developmentAssets + '/images'
@@ -129,8 +121,7 @@ module.exports = {
       src: production + '/**/*.html',
       dest: production,
       origString: '../..',
-      newString: '/mckinsey-portal'
-      //newString: '/pages/DoF/dls'
+      newString: '/'
     }
   },
 

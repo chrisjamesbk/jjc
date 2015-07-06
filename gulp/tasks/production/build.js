@@ -10,7 +10,6 @@ gulp.task('build:production', function(callback) {
   runSequence('delete',
   'jekyll:production',
   'replace:images',
-  'iconify',
   [
     'scripts',
     'images'
