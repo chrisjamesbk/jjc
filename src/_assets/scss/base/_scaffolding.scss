@@ -8,11 +8,33 @@ html {
 }
 
 body {
- color: #333;
+  color: $black;
+  font-family: $acumin;
+  font-size: 16px;
+  font-weight: $regular;
+  line-height: 1.5;
+
+  &.isNavOpen {
+    overflow: hidden;
+  }
 }
 
-hr.light {
-  border-top: 1px solid $green;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $regular;
+}
+
+strong {
+  font-weight: $bold;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.Container {
+  margin-top: 60px;
+  min-width: 320px;
+  position: relative;
 }
 
 

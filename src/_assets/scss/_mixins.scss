@@ -1,0 +1,27 @@
+// Grid
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == 'small-only' {
+    @media (max-width: $bp-medium - 1) {
+      @content;
+    }
+  } @else if $breakpoint == 'medium' {
+    @media (min-width: $bp-medium) {
+      @content;
+    }
+  } @else if $breakpoint == 'large' {
+    @media (min-width: $bp-large) {
+      @content;
+    }
+  } @else {
+    @error 'No value could be retrieved for ' + $breakpoint;
+  }
+}
+
+// Clearfix
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}

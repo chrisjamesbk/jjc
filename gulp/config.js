@@ -30,11 +30,11 @@ module.exports = {
     // bundle config in the list below
     bundleConfigs: [{
       entries:    './' + srcAssets + '/scripts/app.js',
-      dest:       developmentAssets + '/js',
+      dest:       src + '/js',
       outputName: 'app.bundle.js'
     }, {
       entries:    './' + srcAssets + '/scripts/head.js',
-      dest:       developmentAssets + '/js',
+      dest:       src + '/js',
       outputName: 'head.bundle.js'
     }]
   },
@@ -42,7 +42,7 @@ module.exports = {
   browsersync: {
     development: {
       server: {
-        baseDir: [development, build, src]
+        baseDir: [src]
       },
       port: 9999,
       files: [
@@ -127,7 +127,7 @@ module.exports = {
 
   sass: {
     src:  srcAssets + '/scss/main.scss',
-    dest: developmentAssets + '/css',
+    dest: src + '/css',
     options: {
       includePaths: ['scss']
     }
@@ -135,7 +135,7 @@ module.exports = {
 
   sassR: {
     src:  srcAssets + '/scss/**/*.{sass,scss}',
-    dest: developmentAssets + '/css',
+    dest: src + '/css',
     options: {
       noCache: true,
       compass: true,

@@ -1,4 +1,9 @@
 // vars, mixins, scaffolding
 @import 'variables';
+@import 'mixins';
+@import 'base/normalize';
+@import 'base/base';
 @import 'base/scaffolding';
 
+@import 'modules/header';
+@import 'modules/section';
