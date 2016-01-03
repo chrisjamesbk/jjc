@@ -26,7 +26,8 @@
 
 .Section-container {
   background-color: $white;
-  //color: $white;
+  margin: 0 auto;
+  max-width: 1440px;
   padding: 20px;
 
   @include breakpoint(medium) {
@@ -34,7 +35,12 @@
   }
 
   @include breakpoint(large) {
-    padding: 60px;
+    padding: 60px 60px 60px 300px;
+    position: relative;
+
+    > p {
+      padding-right: 240px;
+    }
   }
 }
 
@@ -44,10 +50,14 @@
   padding-top: 20px;
 
   @include breakpoint(small-only) {
+    align-items: flex-end;
     color: $white;
+    display: flex;
+    height: 240px;
     left: 0;
+    max-width: 480px;
     position: absolute;
-    top: 108px;
+    top: 0;
     width: 100%;
   }
 
@@ -59,6 +69,7 @@
 
   @include breakpoint(large) {
     padding-bottom: 60px;
+    padding-left: 60px;
     padding-top: 240px;
   }
 
@@ -83,11 +94,27 @@
 
 .Section-header {
   margin-bottom: 20px;
+
+  @include breakpoint(large) {
+    left: 60px;
+    position: absolute;
+    top: 60px;
+  }
 }
 
 .Section-main {
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  @include breakpoint(large) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    > p {
+      padding-right: 240px;
+    }
   }
 }
 
@@ -97,11 +124,23 @@
     font-weight: $xLight;
     line-height: 1;
     margin-bottom: 10px;
+
+    @include breakpoint(medium) {
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: 32px;
+    }
   }
 }
 
 .Section-intro {
   margin-bottom: 10px;
+
+  @include breakpoint(large) {
+    margin-bottom: 16px;
+  }
 }
 
 .Section-list {
@@ -111,20 +150,59 @@
   > li:not(:last-child) {
     margin-bottom: 10px;
   }
+
+  @include breakpoint(large) {
+    padding-right: 240px;
+
+    > li:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
 }
 
 .Section-points {
-  > dt {
-    font-size: 20px;
-    font-weight: $xLight;
-    margin-bottom: 4px;
+  @include breakpoint(large) {
+    display: flex;
+    margin-left: -10px;
+    width: calc(100% + 20px);
   }
+}
 
-  > dd {
-    margin-bottom: 10px;
+.Section-point {
+  margin-bottom: 10px;
 
-    > strong {
-      color: $theme;
+  @include breakpoint(large) {
+    align-items: center;
+    background-color: $theme;
+    color: $white;
+    display: flex;
+    flex-basis: 25%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10px;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+.Section-pointTitle {
+  font-size: 20px;
+  font-weight: $xLight;
+  margin-bottom: 4px;
+
+  @include breakpoint(large) {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+}
+
+.Section-pointDesc {
+  > strong {
+    color: $theme;
+
+    @include breakpoint(large) {
+      color: $white;
     }
   }
 }
@@ -140,8 +218,16 @@
   margin-bottom: 20px;
 
   @include breakpoint(medium) {
+    border-color: $white;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
     display: flex;
-    flex-direction: row;
+    flex-basis: percentage(1/3);
+    flex-direction: column;
+
+    &:first-child {
+      border-left-width: 1px;
+    }
   }
 }
 
@@ -153,12 +239,19 @@
   }
 
   @include breakpoint(medium) {
-
+    background-color: $theme;
+    border-bottom: 1px solid $white;
+    color: $white;
+    padding: 10px 20px;
   }
 }
 
 .Section-tableMain {
-
+  @include breakpoint(medium) {
+    background-color: rgba($black, 0.1);
+    flex: 1 1 100%;
+    padding: 10px 20px 20px;
+  }
 }
 
 .Section-tableCopy {

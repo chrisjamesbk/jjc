@@ -14,6 +14,10 @@ body {
   font-weight: $regular;
   line-height: 1.5;
 
+  @include breakpoint(large) {
+    font-size: 18px;
+  }
+
   &.isNavOpen {
     overflow: hidden;
   }
@@ -29,6 +33,10 @@ strong {
 
 p {
   margin-bottom: 20px;
+
+  @include breakpoint(large) {
+    margin-bottom: 32px;
+  }
 }
 
 .Container {

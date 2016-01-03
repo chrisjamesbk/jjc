@@ -17,35 +17,37 @@
 
   <body>
     <header class="Header" role="banner">
-      <h1 class="Header-title">Jessica James Consulting</h1>
+      <div class="Header-inner">
+        <h1 class="Header-title">Jessica James Consulting</h1>
 
-      <button class="NavigationTrigger" id="js-toggle-nav">
-        <svg class="NavigationTrigger-isOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 50">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M47 2.2L44.7 0 23.5 22.7 2.3 0 0 2.2 21.3 25 0 47.8 2.3 50l21.2-22.7L44.7 50l2.3-2.2L25.7 25"/>
-        </svg>
-        <svg class="NavigationTrigger-isClosed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 50">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v3.3h67V0H0zm0 26.7h67v-3.3H0v3.3zM0 50h67v-3.3H0V50z"/>
-        </svg>
-      </button>
-      <nav role="navigation" class="Navigation">
-        <ul class="Navigation-list">
-          <li class="Navigation-listItem">
-            <a href="#" data-anchor="what" class="Navigation-item">What we do?</a>
-          </li>
-          <li class="Navigation-listItem">
-            <a href="#" data-anchor="why" class="Navigation-item">Why we do it?</a>
-          </li>
-          <li class="Navigation-listItem">
-            <a href="#" data-anchor="how" class="Navigation-item">How we do it?</a>
-          </li>
-          <li class="Navigation-listItem">
-            <a href="#" data-anchor="who" class="Navigation-item">Who is Jessica?</a>
-          </li>
-          <li class="Navigation-listItem">
-            <a href="#" data-anchor="contact" class="Navigation-item">Contact</a>
-          </li>
-        </ul>
-      </nav>
+        <button class="NavigationTrigger" id="js-toggle-nav">
+          <svg class="NavigationTrigger-isOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 50">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M47 2.2L44.7 0 23.5 22.7 2.3 0 0 2.2 21.3 25 0 47.8 2.3 50l21.2-22.7L44.7 50l2.3-2.2L25.7 25" />
+          </svg>
+          <svg class="NavigationTrigger-isClosed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 50">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v3.3h67V0H0zm0 26.7h67v-3.3H0v3.3zM0 50h67v-3.3H0V50z" />
+          </svg>
+        </button>
+        <nav role="navigation" class="Navigation">
+          <ul class="Navigation-list">
+            <li class="Navigation-listItem">
+              <a href="#" data-anchor="what" class="Navigation-item">What we do?</a>
+            </li>
+            <li class="Navigation-listItem">
+              <a href="#" data-anchor="why" class="Navigation-item">Why we do it?</a>
+            </li>
+            <li class="Navigation-listItem">
+              <a href="#" data-anchor="how" class="Navigation-item">How we do it?</a>
+            </li>
+            <li class="Navigation-listItem">
+              <a href="#" data-anchor="who" class="Navigation-item">Who is Jessica?</a>
+            </li>
+            <li class="Navigation-listItem">
+              <a href="#" data-anchor="contact" class="Navigation-item">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <div class="Container">
@@ -97,19 +99,27 @@
 
             <p class="Section-intro">&mdash; Because it matters to your most important constituencies:</p>
 
-            <dl class="Section-points">
-              <dt>Potential employees</dt>
-              <dd><strong>80% of millennials</strong> want to work for a company that contributes to society</dd>
+            <ul class="Section-points">
+              <li class="Section-point">
+                <div class="Section-pointTitle">Potential employees</div>
+                <div class="Section-pointDesc"><strong>80% of millennials</strong> want to work for a company that contributes to society</div>
+              </li>
 
-              <dt>Current employees</dt>
-              <dd>CSR is the 3rd most important driver of employee engagement overall</dd>
+              <li class="Section-point">
+                <div class="Section-pointTitle">Current employees</div>
+                <div class="Section-pointDesc">CSR is the <strong>3rd most important</strong> driver of employee engagement overall</div>
+              </li>
 
-              <dt>Customers</dt>
-              <dd><strong>92% of consumers</strong> have a more positive image of companies/products that support causes</dd>
+              <li class="Section-point">
+                <div class="Section-pointTitle">Customers</div>
+                <div class="Section-pointDesc"><strong>92% of consumers</strong> have a more positive image of companies/products that support causes</div>
+              </li>
 
-              <dt>Investors</dt>
-              <dd><strong>78% of shareholders</strong> rating company’s philanthropy favorably will continue to invest</dd>
-            </dl>
+              <li class="Section-point">
+                <div class="Section-pointTitle">Investors</div>
+                <div class="Section-pointDesc"><strong>78% of shareholders</strong> rating company’s philanthropy favorably will continue to invest</div>
+              </li>
+            </ul>
           </section>
 
           <section class="Section-main">
@@ -235,29 +245,36 @@
             <h1 class="Section-title">Who is Jessica?</h1>
           </header>
 
-          <p>Logos of companies...</p>
+          <section class="Section-main">
+            <p>Logos of companies...</p>
 
-          <p>Hiring one person in your company to be in charge of "responsibility" implies that everyone else isn’t.</p>
+            <p>Hiring one person in your company to be in charge of "responsibility" implies that everyone else isn’t.</p>
 
-          <p>Hiring an external, apolitical facilitator allows everyone to share the responsibility of being responsible. You do not need a consulting firm or team, you need one person who you and your employees trust to guide the conversation. In order to trust this person, they must have:</p>
+            <p class="Section-intro">Hiring an external, apolitical facilitator allows everyone to share the responsibility of being responsible. You do not need a consulting firm or team, you need one person who you and your employees trust to guide the conversation. In order to trust this person, they must have:</p>
 
-          <ul>
-            <li>Extensive expertise in building sustainable, mutually beneficial partnerships between non-profits and for-profits</li>
-            <li>A portfolio of vetted non-profits with which to partner</li>
-            <li>The ability to facilitate small group conversations and large collaborative events with both sides</li>
-            <li>The time, energy and ability to dedicate to your initiatives</li>
-          </ul>
+            <ul class="Section-list">
+              <li>Extensive expertise in building sustainable, mutually beneficial partnerships between non-profits and for-profits</li>
+              <li>A portfolio of vetted non-profits with which to partner</li>
+              <li>The ability to facilitate small group conversations and large collaborative events with both sides</li>
+              <li>The time, energy and ability to dedicate to your initiatives</li>
+            </ul>
+          </section>
         </div>
       </section>
     </div>
 
-    <footer class="Footer" role="footer">
-      <div class="Section-container">
-        <div class="Section-header">
-          <h1 class="Section-title">Contact Jessica</h1>
+    <footer id="contact" class="Footer" role="footer">
+      <div class="Section-container Section-container--footer">
+        <div class="Section-header Section-header--footer">
+          <h1 class="Section-title Section-title--footer">Contact Jessica</h1>
         </div>
 
-        <p>To set up an in-person meeting, contact Jessica James at <a href="mailto:jessicajamesconsulting@gmail.com">jessicajamesconsulting@gmail.com</a> or <a href="tel:1-213-280-3334">213-280-3334</a>.</p>
+        <p class="Section-intro">To set up an in-person meeting, contact Jessica James:</p>
+
+        <ul>
+          <li><a href="mailto:jessicajamesconsulting@gmail.com" class="Footer--email">jessicajamesconsulting@gmail.com</a></li>
+          <li><a href="tel:1-213-280-3334" class="Footer--phone">213-280-3334</a></li>
+        </ul>
       </div>
     </footer>
   </body>
