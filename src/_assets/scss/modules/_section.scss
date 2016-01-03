@@ -88,6 +88,13 @@
   text-transform: uppercase;
 }
 
+.Section-title--intro,
+.Section-subTitle--intro {
+  @include breakpoint(medium) {
+    font-size: 32px;
+  }
+}
+
 .Section-title {
   color: $theme;
 }

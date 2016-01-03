@@ -1,5 +1,5 @@
 .Header {
-  background: #fff;
+  background-color: $white;
   box-shadow: 0 2px 2px rgba($black, 0.1);
   height: 60px;
   left: 0;
@@ -11,7 +11,14 @@
   z-index: 100;
 
   @include breakpoint(medium) {
+    background-color: transparent;
+    box-shadow: none;
     padding: 0 40px;
+
+    .is-headerSticky & {
+      background-color: $white;
+      box-shadow: 0 2px 2px rgba($black, 0.1);
+    }
   }
 
   @include breakpoint(large) {
@@ -38,7 +45,12 @@
   @include breakpoint(medium) {
     font-size: 32px;
     line-height: 60px;
+    opacity: 0;
     padding: 0;
+
+    .is-headerSticky & {
+      opacity: 1;
+    }
   }
 }
 
