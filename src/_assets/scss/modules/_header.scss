@@ -21,7 +21,7 @@
     }
   }
 
-  @include breakpoint(large) {
+  @media (min-width: 1320px) {
     padding: 0 60px;
   }
 }
@@ -69,7 +69,7 @@
     right: 24px;
   }
 
-  @include breakpoint(large) {
+  @media (min-width: 1320px) {
     display: none;
   }
 
@@ -121,7 +121,7 @@
     padding: 20px 40px;
   }
 
-  @include breakpoint(large) {
+  @media (min-width: 1320px) {
     display: block;
     height: 60px;
     left: auto;
@@ -133,7 +133,7 @@
 }
 
 .Navigation-list {
-  @include breakpoint(large) {
+  @media (min-width: 1320px) {
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -141,7 +141,7 @@
 }
 
 .Navigation-listItem {
-  @include breakpoint(large) {
+  @media (min-width: 1320px) {
     padding: 0 10px;
   }
 }
@@ -157,7 +157,7 @@
     color: $theme;
   }
 
-  @include breakpoint(large) {
+  @media (min-width: 1320px) {
     font-size: 14px;
     line-height: 60px;
   }
