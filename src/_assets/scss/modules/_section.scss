@@ -1,5 +1,7 @@
 .Section-banner {
+  background-color: black;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 240px;
 
@@ -9,15 +11,20 @@
 }
 
 .Section-banner--what {
-  background-image: url('../images/grace1.jpg');
+  background-image: url('../images/grace_group.jpg');
 }
 
 .Section-banner--why {
-  background-image: url('../images/grace2.jpg');
+  background-image: url('../images/jessica_working.jpg');
+
+  @media (min-width: 961px) {
+    background-position: center right;
+    background-size: initial;
+  }
 }
 
 .Section-banner--how {
-  background-image: url('../images/grace3.jpg');
+  background-image: url('../images/jessica_brag.jpg');
 }
 
 .Section-banner--who {
@@ -298,5 +305,43 @@
 
   @include breakpoint(large) {
     margin-bottom: 32px;
+  }
+}
+
+.Section-companiesList {
+  @include breakpoint(medium) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    width: calc(100% + 20px);
+  }
+}
+
+.Section-companiesListItem {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @include breakpoint(medium) {
+    flex-basis: 25%;
+    margin: 0;
+    padding: 0 10px;
+
+    &:nth-child(-n+4) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include breakpoint(large) {
+    &:nth-child(-n+4) {
+      margin-bottom: 16px;
+    }
+  }
+
+  > h4 {
+    @include word-wrap;
+    font-weight: $bold;
   }
 }
