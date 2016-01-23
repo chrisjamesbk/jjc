@@ -349,3 +349,42 @@
     font-weight: $bold;
   }
 }
+
+.Section-aside {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+
+  @include breakpoint(medium) {
+    margin-top: 40px;
+    padding-top: 40px;
+  }
+
+  @include breakpoint(large) {
+    margin-top: 60px;
+    padding-top: 60px;
+  }
+}
+
+.Section-blockquote {
+  border-left: 2px solid $theme;
+  font-size: 14px;
+  margin: 0 auto;
+  max-width: 520px;
+  padding: 0 20px 0 18px;
+
+  @include breakpoint(large) {
+    margin: 0;
+  }
+
+  @include breakpoint(large) {
+    border-left-width: 3px;
+    font-size: 16px;
+    max-width: 100%;
+    padding: 0 240px 0 17px;
+  }
+}
+
+.Section-cite {
+  font-style: normal;
+  font-weight: $xLight;
+}
