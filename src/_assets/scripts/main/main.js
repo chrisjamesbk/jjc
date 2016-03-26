@@ -35,8 +35,13 @@ $('.Navigation-item').on('click', function(e) {
   var target = $(this).attr('data-anchor');
   var offset = $('#' + target).offset().top;
 
+  ga('send', 'event', 'Navigation', 'click', target);
+
   $('html, body').animate({ scrollTop: offset - 60 }, 300);
 });
+
+$('.Footer--email').on('click', ga('send', 'event', 'Contact', 'click', 'email'));
+$('.Footer--phone').on('click', ga('send', 'event', 'Contact', 'click', 'phone'));
 
 
 // Scroll handler
