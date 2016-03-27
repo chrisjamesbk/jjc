@@ -40,8 +40,12 @@ $('.Navigation-item').on('click', function(e) {
   $('html, body').animate({ scrollTop: offset - 60 }, 300);
 });
 
-$('.Footer--email').on('click', ga('send', 'event', 'Contact', 'click', 'email'));
-$('.Footer--phone').on('click', ga('send', 'event', 'Contact', 'click', 'phone'));
+$('.Footer--email').on('click', function() {
+  ga('send', 'event', 'Contact', 'click', 'email');
+});
+$('.Footer--phone').on('click', function() {
+  ga('send', 'event', 'Contact', 'click', 'phone');
+});
 
 
 // Scroll handler
