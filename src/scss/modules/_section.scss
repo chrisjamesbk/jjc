@@ -70,13 +70,12 @@
   @include breakpoint(medium) {
     color: $black;
     padding-bottom: 40px;
-    padding-top: 200px;
+    padding-top: 120px;
   }
 
   @include breakpoint(large) {
     padding-bottom: 60px;
     padding-left: 60px;
-    padding-top: 240px;
   }
 
   .Section-title {
@@ -88,8 +87,9 @@
 
 .Section-title,
 .Section-subTitle {
-  font-weight: $bold;
-  font-size: 28px;
+  font-family: $balboa-condensed;
+  font-weight: $regular;
+  font-size: 32px;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -97,11 +97,13 @@
 .Section-title--intro,
 .Section-subTitle--intro {
   @include breakpoint(medium) {
-    font-size: 32px;
+    font-size: 60px;
+    line-height: 1.04;
   }
 }
 
 .Section-subTitle--intro {
+  color: $theme;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
 
   @include breakpoint(medium) {
@@ -109,7 +111,7 @@
   }
 }
 
-.Section-title {
+.Section-title:not(.Section-title--intro):not(.Section-title--footer) {
   color: $theme;
 }
 

@@ -37,6 +37,14 @@ p {
   @include breakpoint(large) {
     margin-bottom: 32px;
   }
+
+  > a {
+    color: $theme;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 img {

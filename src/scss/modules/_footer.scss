@@ -1,6 +1,7 @@
 .Footer {
+  background-color: $theme;
   a {
-    color: $black;
+    color: $white;
 
     &:hover {
       text-decoration: none;
