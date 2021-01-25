@@ -1,0 +1,40 @@
+$grid-gutter: 20px;
+$grid-margin: 40px;
+$grid-cols: 12;
+$grid-inner: ((2 * $grid-margin) + $grid-gutter);
+
+$grid-sm-gutter: 20px;
+$grid-sm-margin: 0;
+$grid-sm-cols: 6;
+
+// The width of one column + gutter
+// Allows positioning of elements by column multiples
+// e.g. width: calc(#{$grid-col-width} * 2); for 2 col width
+$grid-col-width: calc((100vw - #{$grid-inner}) / #{$grid-cols});
+
+.Grid {
+  display: grid;
+  grid-column-gap: $grid-sm-gutter;
+  grid-template-columns:
+    [wrapper-start] $grid-sm-margin [start] repeat($grid-sm-cols, 1fr)
+    [end] $grid-sm-margin [wrapper-end];
+
+  @include breakpoint(medium) {
+    grid-column-gap: $grid-gutter;
+    grid-template-columns:
+      [wrapper-start] $grid-margin [start] repeat($grid-cols, 1fr)
+      [end] $grid-margin [wrapper-end];
+  }
+}
+
+.Grid-content {
+  grid-column: 2 / 8;
+
+  @include breakpoint(medium) {
+    grid-column: 5 / 12;
+
+    &--wide {
+      grid-column: 5 / 14;
+    }
+  }
+}
