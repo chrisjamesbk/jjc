@@ -1,33 +1,3 @@
-.Footer {
-  background-color: $theme;
-  a {
-    color: $white;
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
-}
-
-.Section-container--footer {
-  background-color: $theme;
-  color: $white;
-
-  @include breakpoint(large) {
-    padding-left: 60px;
-  }
-}
-
-.Section-header--footer {
-  @include breakpoint(large) {
-    position: static;
-  }
-}
-
-.Section-title--footer {
-  color: $white;
-}
-
 .Footer--email {
   background-image: url("../images/icons/email.svg");
   background-position: 0 50%;

@@ -151,53 +151,6 @@
   }
 }
 
-.Byline {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 40px 0;
-
-  @include breakpoint(medium) {
-    padding: 100px 0;
-  }
-
-  > p {
-    border-bottom: 2px solid $theme;
-    color: $black;
-    font-family: $balboa-condensed;
-    font-size: 12vw;
-    line-height: 1.5;
-    margin: 0;
-
-    @include breakpoint(medium) {
-      border-bottom: 0.5vw solid $theme;
-      font-size: 4.5vw;
-      line-height: 6vw;
-      padding-bottom: 1.5vw;
-    }
-  }
-}
-
-.Content {
-  padding: 40px 0;
-  position: relative;
-
-  @include breakpoint(medium) {
-    padding: 120px 0;
-  }
-}
-
-.Content--full {
-  min-height: 100vh;
-}
-
-.Content--centered {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .Section-servicesItem {
   grid-column: 2 / 8;
   margin-bottom: 20px;
@@ -252,6 +205,53 @@
   }
 }
 
+.Content {
+  padding: 40px 0;
+  position: relative;
+
+  @include breakpoint(medium) {
+    padding: 120px 0;
+  }
+}
+
+.Content--full {
+  min-height: 100vh;
+}
+
+.Content--centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Byline {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 0;
+
+  @include breakpoint(medium) {
+    padding: 100px 0;
+  }
+
+  > p {
+    border-bottom: 2px solid $theme;
+    color: $black;
+    font-family: $balboa-condensed;
+    font-size: 12vw;
+    line-height: 1.5;
+    margin: 0;
+
+    @include breakpoint(medium) {
+      border-bottom: 0.5vw solid $theme;
+      font-size: 4.5vw;
+      line-height: 6vw;
+      padding-bottom: 1.5vw;
+    }
+  }
+}
+
 .NewsList-item {
   margin-bottom: 20px;
 
@@ -271,36 +271,4 @@
   @include breakpoint(medium) {
     padding-left: 60px;
   }
-}
-
-// .Mask {
-//   left: 60px;
-//   mask-image: url(../images/JESSICAJAMES.svg);
-//   position: fixed;
-//   top: calc(100% - 60px);
-//   transform: rotate(-90deg);
-//   transform-origin: top left;
-//   width: calc(100vh - 120px);
-
-//   > img {
-//     display: block;
-//     opacity: 0;
-//     width: 100%;
-//   }
-// }
-
-.Signup {
-  margin-top: 10px;
-
-  @include breakpoint(medium) {
-    margin-top: 20px;
-  }
-}
-
-.Signup-header {
-  margin-bottom: 10px;
-}
-
-.Signup-form {
-  margin-left: -12px;
 }
