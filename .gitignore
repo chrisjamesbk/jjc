@@ -8,3 +8,5 @@ npm-debug.log
 src/_assets/scripts/libs/
 src/css
 *.bundle.js
+
+test
