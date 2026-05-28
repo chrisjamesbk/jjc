@@ -1,13 +1,17 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+@use 'grid' as g;
+
 .Section {
   position: relative;
 }
 
 .Section--themed {
-  background-color: $theme;
-  color: $white;
+  background-color: v.$theme;
+  color: v.$white;
 
   a {
-    color: $white;
+    color: v.$white;
 
     &:hover {
       text-decoration: none;
@@ -16,20 +20,20 @@
 }
 
 .Section-heading {
-  border-bottom: 1px solid $theme;
-  color: $black;
-  font-family: $balboa-condensed;
+  border-bottom: 1px solid v.$theme;
+  color: v.$black;
+  font-family: v.$balboa-condensed;
   font-size: 28px;
   line-height: 1.5;
   margin: 0 0 20px;
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     font-size: 40px;
     margin: 0 0 60px;
   }
 
   &--footer {
-    color: $white;
+    color: v.$white;
     margin: 0;
   }
 }
@@ -59,7 +63,7 @@
     max-height: 100%;
   }
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     flex-basis: 25%;
     height: 145px;
     margin-bottom: 30px;
@@ -70,29 +74,29 @@
   }
 
   > h4 {
-    @include word-wrap;
-    font-weight: $bold;
+    @include m.word-wrap;
+    font-weight: v.$bold;
   }
 }
 
 .Section-pushed {
   margin-bottom: 20px;
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     float: right;
-    margin: 0 calc(#{$grid-col-width} * -1) $grid-gutter $grid-gutter;
-    width: calc(#{$grid-col-width} * 2);
+    margin: 0 calc(#{g.$grid-col-width} * -1) g.$grid-gutter g.$grid-gutter;
+    width: calc(#{g.$grid-col-width} * 2);
   }
 }
 
 .Section-footerImage {
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    margin: 0 calc(#{$grid-col-width} * -1) $grid-gutter $grid-gutter;
-    width: calc(#{$grid-col-width} * 2);
+    margin: 0 calc(#{g.$grid-col-width} * -1) g.$grid-gutter g.$grid-gutter;
+    width: calc(#{g.$grid-col-width} * 2);
   }
 }
 
@@ -100,36 +104,36 @@
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 20px;
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     margin-top: 40px;
     padding-top: 40px;
   }
 
-  @include breakpoint(large) {
+  @include m.breakpoint(large) {
     margin-top: 60px;
     padding-top: 60px;
   }
 }
 
 .Section-blockquote {
-  border-left: 2px solid $theme;
+  border-left: 2px solid v.$theme;
   font-size: 14px;
   margin: 0 auto;
   max-width: 520px;
   padding: 0 20px 0 18px;
 
-  @include breakpoint(large) {
+  @include m.breakpoint(large) {
     border-left-width: 3px;
     font-size: 16px;
     margin: 0;
     max-width: 100%;
-    padding: 0 $grid-col-width 0 17px;
+    padding: 0 g.$grid-col-width 0 17px;
   }
 }
 
 .Section-cite {
   font-style: normal;
-  font-weight: $xLight;
+  font-weight: v.$xLight;
 }
 
 .Section-logos {
@@ -144,9 +148,9 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: calc(#{$grid-col-width} * 2);
+  width: calc(#{g.$grid-col-width} * 2);
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     display: block;
   }
 }
@@ -159,7 +163,7 @@
     margin-bottom: 0;
   }
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     margin-bottom: 60px;
 
     &:nth-child(3n - 2) {
@@ -182,14 +186,14 @@
 }
 
 .Section-servicesTitle {
-  font-family: $balboa-condensed;
+  font-family: v.$balboa-condensed;
   font-size: 20px;
-  font-weight: $regular;
+  font-weight: v.$regular;
   line-height: 1;
   margin-bottom: 10px;
   text-transform: uppercase;
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     font-size: 24px;
     line-height: 27px;
     margin-bottom: 13px;
@@ -201,7 +205,7 @@
   padding-left: 20px;
 
   a {
-    color: $black;
+    color: v.$black;
   }
 }
 
@@ -209,7 +213,7 @@
   padding: 40px 0;
   position: relative;
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     padding: 120px 0;
   }
 }
@@ -231,20 +235,20 @@
   min-height: 100vh;
   padding: 40px 0;
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     padding: 100px 0;
   }
 
   > p {
-    border-bottom: 2px solid $theme;
-    color: $black;
-    font-family: $balboa-condensed;
+    border-bottom: 2px solid v.$theme;
+    color: v.$black;
+    font-family: v.$balboa-condensed;
     font-size: 12vw;
     line-height: 1.5;
     margin: 0;
 
-    @include breakpoint(medium) {
-      border-bottom: 0.5vw solid $theme;
+    @include m.breakpoint(medium) {
+      border-bottom: 0.5vw solid v.$theme;
       font-size: 4.5vw;
       line-height: 6vw;
       padding-bottom: 1.5vw;
@@ -255,7 +259,7 @@
 .NewsList-item {
   margin-bottom: 20px;
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     margin-bottom: 30px;
   }
 }
@@ -264,11 +268,11 @@
   background-image: url("../images/icons/news.svg");
   background-position: 0 50%;
   background-repeat: no-repeat;
-  color: $black;
+  color: v.$black;
   display: inline-block;
   padding-left: 42px;
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     padding-left: 60px;
   }
 }

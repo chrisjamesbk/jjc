@@ -1,5 +1,8 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
 .Header {
-  background-color: $white;
+  background-color: v.$white;
   height: 60px;
   left: 0;
   position: fixed;
@@ -7,7 +10,7 @@
   width: 100%;
   z-index: 100;
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     background-color: transparent;
     height: 100%;
     pointer-events: none;
@@ -20,7 +23,7 @@
   padding: 10px 20px;
   position: relative;
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     height: 100%;
     padding: 60px;
   }
@@ -33,10 +36,9 @@
     height: 40px;
   }
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     left: 60px;
     position: absolute;
-    // text-transform: uppercase;
     top: calc(100% - 60px);
     transform: rotate(-90deg);
     transform-origin: top left;

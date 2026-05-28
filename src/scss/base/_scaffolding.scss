@@ -1,15 +1,18 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
 /* ==========================================================================
    Base styles - Scaffolding
    ========================================================================== */
 
 body {
-  color: $black;
-  font-family: $acumin;
+  color: v.$black;
+  font-family: v.$acumin;
   font-size: 16px;
-  font-weight: $regular;
+  font-weight: v.$regular;
   line-height: 1.5;
 
-  @include breakpoint(large) {
+  @include m.breakpoint(large) {
     font-size: 18px;
   }
 
@@ -24,22 +27,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: $regular;
+  font-weight: v.$regular;
 }
 
 strong {
-  font-weight: $bold;
+  font-weight: v.$bold;
 }
 
 p {
   margin-bottom: 20px;
 
-  @include breakpoint(large) {
+  @include m.breakpoint(large) {
     margin-bottom: 32px;
   }
 
   > a {
-    color: $theme;
+    color: v.$theme;
 
     &:hover {
       text-decoration: none;

@@ -1,11 +1,8 @@
-// vars, mixins, scaffolding
-@import 'variables';
-@import 'mixins';
-@import 'base/normalize';
-@import 'base/base';
-@import 'base/scaffolding';
+@use 'base/normalize';
+@use 'base/base';
+@use 'base/scaffolding';
 
-@import 'modules/grid';
-@import 'modules/header';
-@import 'modules/section';
-@import 'modules/footer';
+@use 'modules/grid';
+@use 'modules/header';
+@use 'modules/section';
+@use 'modules/footer';

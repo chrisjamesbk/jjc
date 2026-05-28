@@ -1,3 +1,5 @@
+@use '../mixins' as m;
+
 $grid-gutter: 20px;
 $grid-margin: 40px;
 $grid-cols: 12;
@@ -19,7 +21,7 @@ $grid-col-width: calc((100vw - #{$grid-inner}) / #{$grid-cols});
     [wrapper-start] $grid-sm-margin [start] repeat($grid-sm-cols, 1fr)
     [end] $grid-sm-margin [wrapper-end];
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     grid-column-gap: $grid-gutter;
     grid-template-columns:
       [wrapper-start] $grid-margin [start] repeat($grid-cols, 1fr)
@@ -30,7 +32,7 @@ $grid-col-width: calc((100vw - #{$grid-inner}) / #{$grid-cols});
 .Grid-content {
   grid-column: 2 / 8;
 
-  @include breakpoint(medium) {
+  @include m.breakpoint(medium) {
     grid-column: 5 / 12;
 
     &--wide {
